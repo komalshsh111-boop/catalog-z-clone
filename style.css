@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: #0099cc;
+    font-size: 35px;
+}
+
+.logo h2 {
+    color: #0099cc;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #0099cc;
+}
+
+/* Hero Section */
+
+.hero {
+    height: 500px;
+    background: url(img/australian-pelican-9622118_1280.webp) center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    width: 600px;
+    display: flex;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    transition: .3s;
+}
+
+.search-box:hover {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+.search-box input {
+    flex: 1;
+    padding: 18px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    transition: .3s;
+}
+
+.search-box input:focus {
+    background: #ffffff;
+}
+
+.search-box button {
+    width: 70px;
+    border: none;
+    background: #0099cc;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.search-box button:hover {
+    background: #007aa3;
+}
+
+/* Photos Section */
+
+.photos-section {
+    width: 90%;
+    margin: 60px auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: #0099cc;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.section-header p {
+    color: #666;
+}
+
+/* Gallery */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* ===== CARD ===== */
+
+.card {
+    width: calc(25% - 19px);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay */
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    background: rgb(104, 104, 102);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.card:hover .card-content {
+    opacity: 1;
+}
+
+/* Title - border ke sath bilkul original jaisa */
+
+.card-content h5 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 12px 30px;
+}
+
+/* Date & Views - overlay ke bahar neeche */
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    font-size: 14px;
+    padding-top: 12px;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 60px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #666;
+    padding: 12px 18px;
+    background: #f5f5f5;
+}
+
+.active-page {
+    background: #0099cc !important;
+    color: white !important;
+}
+
+/* Footer */
+
+footer{
+    background:#e8eaf0;
+    margin-top:80px;
+    padding:60px 80px 30px 80px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    align-items:flex-start;
+}
+
+.footer-box{
+    flex:1;
+}
+
+.footer-box h3{
+    color:#0099cc;
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.footer-box p{
+    line-height:1.8;
+    color:#555;
+    font-size:15px;
+}
+
+.footer-box ul{
+    list-style:none;
+}
+
+.footer-box ul li{
+    margin-bottom:12px;
+}
+
+.footer-box ul li a{
+    text-decoration:none;
+    color:#555;
+    font-size:15px;
+    transition:.3s;
+}
+
+.footer-box ul li a:hover{
+    color:#0099cc;
+}
+
+/* Right box - social + links */
+
+.footer-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:30px;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#555;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#0099cc;
+    color:white;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:8px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#555;
+    font-size:15px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#0099cc;
+}
+
+.footer-links p{
+    color:#555;
+    font-size:15px;
+}
+
+.footer-links p a{
+    color:#0099cc;
+    text-decoration:none;
+}
+
+/* Copyright bottom */
+
+.footer-copyright{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid #d0d0d0;
+    text-align:center;
+}
+
+.footer-copyright p{
+    color:#888;
+    font-size:14px;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+    .footer-container{
+        flex-direction:column;
+    }
+
+    .footer-right{
+        align-items:flex-start;
+    }
+
+    .footer-links{
+        align-items:flex-start;
+    }
+}
